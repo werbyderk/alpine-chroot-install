@@ -344,6 +344,9 @@ gen_chroot_script > enter-chroot
 
 einfo 'Setting up Alpine'
 
+touch enter-chroot
+chmod 777 enter-chroot
+
 ./enter-chroot <<-EOF
 	set -e
 	apk update
